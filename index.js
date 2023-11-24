@@ -127,6 +127,7 @@ valid_email('me-info@example.com');
 valid_email('me-infoexample.com');
 
 
+
 //To count the number of words in the string
 function count_words() {
     str1 = document.getElementById("InputText").value;
@@ -138,6 +139,7 @@ function count_words() {
     str1 = str1.replace(/\n /, "\n");
     document.getElementById("noofwords").value = str1.split(' ').length;
 }
+
 
 
 //Find the number of vovels in given string
@@ -160,3 +162,38 @@ function is_caPostalCode(str) {
 }
 is_caPostalCode('K8V3Y1');
 is_caPostalCode('Z4V4X1');
+
+
+//Write a JavaScript function to validate whether a given value type is NaN or not.
+function is_nan(val) {
+    return val !== val;
+}
+console.log(is_nan(NaN));
+console.log(is_nan('bar'));
+
+
+//Write a JavaScript function to validate whether a given value is a number or not.
+function is_number(value) {
+    return !isNaN(value) && toString.call(value) === '[object Number]';
+}
+console.log(is_number(NaN));
+console.log(is_number(42.32));
+console.log(is_number(72));
+
+
+
+//Input numbers are same or not
+function is_sameType(value1, value2) {
+    if(is_nan(value1) || is_nan(value2)) {
+     return is_nan(value1) === is_nan(value2);
+    }
+    return toString.call(value1) === toString.call(value2);
+}
+function is_nan(val)
+    {
+    return val !== val;
+   }
+console.log(is_sameType('12', 100));
+console.log(is_sameType('12', '100'));
+console.log(is_sameType(12, 100));
+
