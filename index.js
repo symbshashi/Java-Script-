@@ -145,3 +145,18 @@ function vowel_count(str) {
     return str.match(/[aeiou]/gi).length; //g used for global to search in all string and i used for case-senstive matching
 }
 console.log(vowel_count('Hello my name is javascript'));
+
+
+
+//Validate the canada zipcode
+function is_caPostalCode(str) {
+    regexp = /^(?!.*[DFIOQU])[A-VXY][0-9][A-Z]\s?[0-9][A-Z][0-9]$/; // \s is used for the space  to make it valid
+    if (regexp.test(str)) {
+        console.log("This Zip code is valid");
+    }
+    else {
+        console.log("This Zip code is Invalid");
+    }
+}
+is_caPostalCode('K8V3Y1');
+is_caPostalCode('Z4V4X1');
