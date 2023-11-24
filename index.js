@@ -120,7 +120,7 @@ function valid_email(str) {
         console.log("Valid email address!");
     }
     else {
-        console.log("You have entered an invalid email address!");
+        console.log("Invalid email address!");
     }
 }
 valid_email('me-info@example.com');
